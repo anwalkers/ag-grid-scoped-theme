@@ -1,0 +1,7 @@
+@use "../ag-grid-theme" as ag-grid;
+
+@mixin theme() {
+  .app-scope {
+    @include ag-grid.grid-style();
+  }
+}

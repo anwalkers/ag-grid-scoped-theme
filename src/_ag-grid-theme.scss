@@ -1,0 +1,20 @@
+@use "ag-grid-community/styles" as ag;
+
+@mixin grid-style($theme: alpine) {
+  @include ag.grid-styles((
+    theme: custom-angular,
+    extend-theme: $theme,
+
+    odd-row-background-color: #f2f8f2,
+    row-border-color: transparent,
+    row-hover-color: null,
+    checkbox-checked-color: #2661ad,
+    range-selection-border-color: #ff00b1,
+    range-selection-background-color: #03305633,
+  ));
+
+  .ag-theme-custom-angular  .ag-menu-option-active {
+    background-color: #2661ad;
+    color: white;
+  };
+}
