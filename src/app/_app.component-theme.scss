@@ -1,7 +1,11 @@
-@use "../ag-grid-theme" as ag-grid;
+@use '../ag-grid-theme' as ag-grid;
 
 @mixin theme() {
+  // Scoping the grid style to one component the row height does not get calculated correctly;
   .app-scope {
     @include ag-grid.grid-style();
   }
+
+  // Without the scope it calculates the row height correctly
+  // @include ag-grid.grid-style();
 }
